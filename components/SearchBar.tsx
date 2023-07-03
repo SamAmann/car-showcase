@@ -37,11 +37,6 @@ export default function SearchBar({
   const [searchModel, setSearchModel] = useState('');
 
   useEffect(() => {
-    // Trigger form submission when searchManufacturer changes
-    if (searchManufacturer === '' && searchModel === '') {
-      return alert('Please enter a manufacturer or model');
-    }
-
     setModel(searchModel.toLowerCase());
     setManufacturer(searchManufacturer.toLowerCase());
   }, [searchManufacturer, searchModel]);
